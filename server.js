@@ -25,8 +25,10 @@ io.on("connection", (socket) => {
   });
 });
 
+const urlMongo = "mongodb+srv://root:MItpkjwb9*@cluster0.4vpfy.mongodb.net/chatdb?retryWrites=true&w=majority"
+
 mongoose.connect(
-  "mongodb://localhost/BBDD",
+  urlMongo,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (error, response) => {
     if (error) {

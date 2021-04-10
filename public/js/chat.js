@@ -32,7 +32,7 @@ function sendMessage(message, user) {
     },
     body: JSON.stringify(newMessage), //Ojo hay que parsearlo
   };
-  fetch("http://localhost:1333/save-message", opts)
+  fetch("https://mmschat.herokuapp.com/save-message", opts)
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((error) => console.error(error))

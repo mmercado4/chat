@@ -25,7 +25,8 @@ io.on("connection", (socket) => {
   });
 });
 
-const urlMongo = "mongodb+srv://root:MItpkjwb9*@cluster0.4vpfy.mongodb.net/chatdb?retryWrites=true&w=majority"
+const urlMongo =
+  "mongodb+srv://root:MItpkjwb9*@cluster0.4vpfy.mongodb.net/chatdb?retryWrites=true&w=majority";
 
 mongoose.connect(
   urlMongo,
@@ -69,6 +70,8 @@ app.use(
   express.static(__dirname + "/node_modules/@fortawesome/fontawesome-free/")
 );
 
-server.listen(1333, () => {
-  console.log("Server is running at port 1333");
+const PORT = process.env.PORT || 1333;
+
+server.listen(PORT, () => {
+  console.log(`Server is running at port ${PORT}`);
 });
